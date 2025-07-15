@@ -42,7 +42,7 @@ container.innerHTML = gatos.map((gato) => `
   <div class="w-full h-[300px] md:h-[500px] overflow-hidden">
     <img src="/assets/${gato.imagen}" alt="${gato.nombre}" class="w-full h-full object-cover rounded-t-lg" />
   </div>
-  <h2 class="text-black"><strong>${gato.nombre}</strong></h2>
+  <h2 class="text-black md:text-xl"><strong>${gato.nombre}</strong></h2>
   <button onclick="CrearModal(${gato.id})" class="bg-[#E53935] text-black px-4 py-2 rounded-lg hover:bg-[#D32F2F] transition duration-300 md:text-xl cursor-pointer">
     Ver más
   </button>
