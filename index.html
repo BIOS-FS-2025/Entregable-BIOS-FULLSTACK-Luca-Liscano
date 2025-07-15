@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="" type="image/png" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>MeowCat Info</title>
+  </head>
+  <body class="font-sora">
+    <header class="fixed top-0 left-0 w-full z-50">
+      <div
+        class="flex items-center h-1/3 justify-between md:justify-evenly p-4 bg-black text-white"
+      >
+        <div class="md:p-4 flex items-center space-x-4">
+          <span
+            ><img class="h-24 w-24" src="/assets/logo.png" alt="Logo"
+          /></span>
+          <span class="text-xl hidden md:block">MeowCat Info</span>
+        </div>
+       
+        <nav>
+          <ul class="hidden md:flex gap-8 items-center">
+            <li><a class="" href="#Banner">Inicio</a></li>
+            <li><a class="" href="#About-Us">¿Quienes somos?</a></li>
+            <li><a class="" href="#Container-cats">Gatos</a></li>
+            <li><a class="" href="#">Contacto</a></li>
+          </ul>
+        </nav>
+         <button class="md:hidden" id="open-button">
+          <img
+            src="/assets/menu-svgrepo-com.svg"
+            alt=""
+            class="h-12 w-12 md:hidden"
+          />
+        </button>
+        <nav
+        id="nav-mobile"
+          class="fixed top-0 right-0 bg-black bg-opacity-95 h-screen flex flex-col items-end p-12 gap-4 z-[999] shadow-[0_0_20px_rgba(0,0,0,0.6),_0_0_40px_rgba(0,0,0,0.4)] opacity-0 translate-x-full pointer-events-none transition-opacity transition-transform duration-300 ease-in-out"
+        >
+          <button id="close-button" class="hidden">
+            <img
+              src="/assets/close-svgrepo-com.svg"
+              alt=""
+              class="h-8 w- md:hidden"
+            />
+          </button>
+          <ul class="flex flex-col gap-4 items-end md:flex-row md:gap-8 md:items-center">
+            <li><a class="" href="#Banner">Inicio</a></li>
+            <li><a class="" href="#About-Us">¿Quienes somos?</a></li>
+            <li><a class="" href="#Container-cats">Gatos</a></li>
+            <li><a class="" href="#">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div id="Banner">
+      <div
+        class="flex gap-4 flex-col items-center justify-center h-screen text-black"
+      >
+        <h1 class="text-5xl md:text-8xl text-center mt-8 shadow-md-y"><strong>MeowCat Info</strong></h1>
+        <p class="text-center mt-4 ">Hecho por Luca Liscano</p>
+        <a
+          href="#About-Us"
+          class="bg-[#E53935] text-black px-4 py-2 rounded-lg mt-4 hover:bg-[#D32F2F] transition duration-300 md:text-xl"
+        >
+          Ver más
+        </a>
+      </div>
+    </div>
+<div class="h-20 bg-gradient-to-b from-[#FFFFFF] to-[#F9F4ED]"></div>
+    <div
+      id="About-Us"
+      class="flex gap-4 flex-col items-center justify-center h-screen bg-[#F9F4ED] md:flex-row "
+    >
+      <div>
+        <img src="/assets/logo.png" alt="ZigZag" class="h-24 w-24 block md:hidden" />
+      </div>
+       <div>
+        <img src="/assets/Logo-mascota.png" alt="ZigZag" class="h-80 w-80 hidden md:block" />
+      </div>
+      <div class="flex gap-4 flex-col items-center justify-center p-4 pt-0 md:p-8 md:w-1/3 md:items-start">
+        <h2 class="text-4xl text-center title-marked ">
+          <strong>¿Quienes somos?</strong>
+        </h2>
+        <p class="text-center mt-4 md:text-justify md:mt-0">
+          MeowCat Info es un espacio dedicado a conectar corazones. Aquí
+          encontrarás información detallada sobre gatos en busca de un hogar: su
+          personalidad, cuidados, historia y todo lo que necesitás saber para
+          adoptar con responsabilidad. Cada gato tiene una historia, y vos podés
+          ser parte del próximo capítulo.
+        </p>
+        <a
+          href="#Container-cats"
+          class="bg-[#E53935] text-black px-4 py-2 rounded-lg mt-4 hover:bg-[#D32F2F] transition duration-300 md:text-xl"
+        >
+          Ver gatos
+        </a>
+      </div>
+    </div>
+        <div class="h-20 bg-gradient-to-b from-[#F9F4ED] to-[#E8DED3]"></div>
+
+    <div
+      id="Cats-info"
+      class="flex gap-4 flex-col items-center justify-center min-h-screen bg-[#E8DED3]"
+    >
+      <div class="flex gap-4 flex-col items-center justify-center p-4 pt-0" id="Container-cats">
+        <h2 class="text-4xl text-center mt-8">
+          <strong>😺 Nuestros gatos</strong>
+        </h2>
+        <div
+          id="box-cats"
+          class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 w-full max-w-screen-xl p-4"
+        >
+          <!-- Los gatos se cargarán aquí dinámicamente -->
+        </div>
+      </div>
+    </div>
+    <div class="h-20 bg-gradient-to-b from-[#E8DED3] to-[#D5C8B9]"></div>
+    <footer class="bg-[#D5C8B9] p-4 text-white">
+      <div class="flex justify-center mb-4">
+        <img src="/assets/logo.png" alt="Logo" class="h-24 w-24" />
+      </div>
+      <ul class="flex justify-center gap-8 mb-4">
+        <li><a href="#Banner">Inicio</a></li>
+        <li><a href="#About-Us">¿Quienes somos?</a></li>
+        <li><a href="#Container-cats">Gatos</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+      <p class="text-center text-sm md:text-base">
+        &copy; 2025 MeowCat Info. Todos los derechos reservados.
+      </p>
+    </footer>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
